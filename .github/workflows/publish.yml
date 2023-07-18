@@ -15,7 +15,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Create NuGet package
-      run: dotnet pack -o . /p:Version=$GITHUB_REF_NAME
+      run: dotnet pack -o . /p:Version=$GITHUB_REF_NAME /p:ContinuousIntegrationBuild=true
     - name: Upload NuGet package
       uses: actions/upload-artifact@v3
       with:
