@@ -2,15 +2,25 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Authors>JEgger</Authors>
+    <Description>.NET wrapper library for Sokrates web service.</Description>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <None Include="..\icon.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharp.Data" Version="6.2.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
