@@ -20,7 +20,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: nuget-package
-        path: ./*.nupkg
+        path: |
+          ./*.nupkg
+          ./*.snupkg
   nuget-publish:
     needs: build
     runs-on: ubuntu-latest
